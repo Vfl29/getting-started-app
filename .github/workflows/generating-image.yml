@@ -1,1 +1,14 @@
+name : package-getting-started-app
+on : [push]
+jobs :
+  package-getting-started-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
+      - name: Test after checkout
+        run: ls
+# - checkout le code 
+# - build et tag image
+# - push sur dockerhub
