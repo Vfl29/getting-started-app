@@ -9,6 +9,11 @@ jobs :
 
       - name: Test after checkout
         run: ls
+
+      - name: Build and tag image
+        run: |
+          docker build -t Vfl29/package-getting-started-app:${{ github.sha }} .
+
 # - checkout le code 
 # - build et tag image
 # - push sur dockerhub
